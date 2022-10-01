@@ -14,7 +14,12 @@
 
 
     <script>
- 
+
+/*
+    Visitor Design Pattern -> https://youtu.be/x-Gx0Ym1Di0
+    Author: DevSage (Youtube) -> https://www.youtube.com/DevSage
+*/
+
 function Employee(name, salary)
 {
   this.name = name
@@ -22,7 +27,6 @@ function Employee(name, salary)
 }
 
 Employee.prototype = {
-
   getSalary: function()
   {
     return this.salary
@@ -40,7 +44,6 @@ Employee.prototype = {
 
 const devsage = new Employee("DevSage", 10000)
 console.log(devsage.getSalary())
-///////////////////////
 
 function ExtraSalary(emp)
 {
