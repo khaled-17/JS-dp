@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ceo</title>
+</head>
+<body>
+
+<h1>CEO Class</h1>
+<h1>open consol  </h1>
+
+
+
+    <script>
+        instance=null;
+
+class Ceo{
+    constructor(name,age,address) {
+        if(instance==null)
+        {
+            this.name=name;
+            this.age=age;
+            this.address=address;
+            instance=this; 
+        }
+       else
+       {
+        return instance;
+       } 
+        
+    }
+
+}
+let ceo1= new Ceo("khaled",25,"sohag")
+let ceo2= new Ceo("ali",90,"alex")
+console.log(ceo1);
+console.log(ceo2);
+
+document.write(ceo1.age)
+document.write(ceo2)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+</head>
+<body>
+    <h1>car</h1>
+    <h1>open consol</h1>
+
+
+<script>
+class Car
+{
+    constructor(Owner,error)
+    {
+        this.Owner=Owner;
+        this.error=error;
+     }
+}
+
+class lada extends Car {
+    constructor(Owner,error)
+    {
+        super(Owner,error);
+    }
+    returninfo() {
+        return `  car Owner ${this.Owner} ,car error ${this.error}`;
+    }
+}
+
+
+class lamprgeby extends Car {
+    constructor(Owner,error)
+    {
+        super(Owner,error);
+    }
+    returninfo() {
+        return `  car Owner ${this.Owner} ,car error ${this.error}`;
+    }
+}
+
+ 
+
+class carFactory {
+    constructor(carType) {
+        this.carType = carType;
+    }
+
+    return_OwnerAnd_error() {
+        switch (this.carType) {
+            case 'lada':
+                return new lada("khaled","sond from engend ")
+            case 'lamprgeby':
+                return new lamprgeby("ali","check up ")
+            default:
+                console.log("Invalid car name")
+        }
+    }
+}
+
+ 
+let car1 = new carFactory('lamprgeby');
+let carinfo = car1.return_OwnerAnd_error();
+ console.log(carinfo.returninfo());
+
+
+
+
+
+
+</script>
+</body>
+</html>
