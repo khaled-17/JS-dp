@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Pattern
+    </title>
+</head>
+<body>
+    <H1>Strategy Pattern</H1>
+    <H1>open consol</H1>
+
+<script>
+    class Attack
+{
+    actiondo(shipmentPackage)
+    {
+        //calculations
+        return 'Attack';
+    }
+}
+
+class Defence
+{
+    actiondo(shipmentPackage)
+    {
+        //calculations
+        return 'Defence'
+    }
+}
+
+
+class Game
+{
+    setStrategy(action)
+    {
+        this.action=action;
+    }
+
+    actiondo(player)
+    {
+        return this.action.actiondo(player);
+    }
+}
+
+var player ={name :'mo '};
+
+var attack= new Attack();
+ 
+var game= new Game();
+
+game.setStrategy(attack);
+console.log(game.actiondo(player));
+
+ 
+</script>
+<!-- <script>
+
+// class Attack {
+     
+//    typeOFgame(action)
+//     {
+//         return  'go and Attack ##'  ;
+//     }
+
+// }
+
+
+
+
+class Attack{
+    thetype(action){
+        return "ataaack";
+    }
+}
+ // /?????/
+
+class Howplay{
+    setStrategy(action)
+    {
+        this.action=action
+    }
+    thetype(play)
+    {
+        return this.action.thetype(action)
+    }
+}
+
+var  Package ={   name:'mo'};
+var attack = new Attack;
+var howplay = new Howplay;
+
+howplay.setStrategy(attack);
+
+console.log(howplay.thetype( ));
+
+
+
+
+
+// var game={nom:22, name:"mp salah"}
+
+
+// var attack=new Attack();
+
+// var gameHo=new GameHow();
+
+
+// gameHo.setStrategy(attack)
+
+// console.log(GameHow.chengethegame(game));
+// class GameHow{
+//     setStrategy(action)
+// {
+// this.action=action;
+// }
+
+// chengethegame(action){
+
+//     return this.action.chengethegame(game)
+// }
+
+// }
+
+
+
+
+
+
+
+
+
+// const a=new Attack()
+// console.log(a);
+
+
+</script> -->
+</body>
+</html>

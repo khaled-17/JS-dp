@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder design pattern ( </title>
+</head>
+<body>
+    <h1>Builder design pattern (</h1>
+    <h1>open consol </h1>
+
+
+
+    <script>
+class product{
+    constructor(product,prise){
+        this.prise=prise;
+        this.product=product||meat;
+    }
+    toString(){
+         return console.log(JSON.stringify(this));
+    }
+}
+
+class AddProducts{
+   constructor (prise=0,product){
+this.prise=prise;
+this.product=product;
+
+   }
+   addPrise(prise){
+    this.prise=prise;
+    return this;
+   }
+   addQuantity(Quantity){
+    this.Quantity=Quantity;
+    return this
+
+   }
+
+   addStore(){
+    return new product(this);
+   }
+
+} 
+
+const product1= new AddProducts("tea").addPrise(100).addQuantity('300 pes').addStore();
+product1.toString()
+
+     </script>
+    
+</body>
+</html>

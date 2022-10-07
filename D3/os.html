@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>os</title>
+</head>
+<body>
+    <h1>os</h1>
+    <h1>open console</h1>
+
+
+
+    <script>
+
+class How {
+    constructor(pickup){
+         this.pickup=pickup;
+            }
+    printInfo(){
+        console.log(`${this.pickup}`)
+    }
+
+}
+ 
+class Playground extends How{
+    constructor(pickup,road)
+{
+    super(pickup);
+    /// we add rwad
+    this.road=road
+}
+printInfo( ){
+        console.log(`the pickup <<   ${this.pickup}   >>   and road is  ${this.road}`)
+    }
+}
+
+class Air extends How{
+    constructor(pickup,airport)
+{
+    super(pickup);
+    /// we add airport
+    this.airport=airport
+}
+printInfo( ){
+        console.log(`the pickup <<   ${this.pickup}   >>   and road is  ${this.airport}`)
+    }
+}
+
+
+class firstcustomerbyKG  extends Playground{
+    constructor(pickup,road,KG)
+{
+    super(pickup,road);
+    
+     this.KG=KG;
+ }
+printInfo( ){
+        console.log(` BY (KG + Playground ) the pickup <<   ${this.pickup}   >>   and road is  ${this.airport}  is  ${this.KG}  `)
+    }
+}
+
+////////////////////////////////
+
+class socondcustomerbybond  extends Air{
+    constructor(pickup,airport,bond )
+{
+    super(pickup,airport);
+    
+     this.bond =bond ;
+ }
+printInfo( ){
+        console.log(` BY (bond + airport ) the pickup <<   ${this.pickup}   >>   and road is  ${this.airport}  is  ${this.bond }  `)
+    }
+}
+
+
+
+
+
+
+
+
+
+var bacge=[
+    new How("fooddd"),
+    new firstcustomerbyKG("fooddd","eg>>alex","100 kg"),
+    new socondcustomerbybond("doog","eg>>alex","900 bond"),
+    new Air("fooddd","ciro airport")
+]
+
+function printallbacge(arr) {
+    arr.forEach(element => {
+         element.printInfo()
+         console.log("=================");
+    });
+    
+}
+printallbacge(bacge)
+    </script>
+</body>
+</html>

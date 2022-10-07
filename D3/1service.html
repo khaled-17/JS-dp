@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srp</title>
+</head>
+<body>
+    <h1>srp  1-Single-responsibility principle
+    </h1>
+    <h1>open consol </h1>
+
+    <script>
+class Service {
+constructor(ordernum){
+this.ordernum=ordernum;
+
+}
+    
+}
+
+class Authenticate extends Service{
+    constructor(ordernum,validate )
+{
+    super (ordernum)
+    this.validate=validate;
+}
+outpot(){
+    console.log(`this ordernum is ${this.ordernum},this ordernum is ${this.validate}, `);
+
+    
+}
+} 
+
+class implemented extends Service{
+    constructor(ordernum,credintials  )
+{
+    super (ordernum)
+    this.validate=credintials ;
+}
+outpot(){
+    console.log(`this ordernum is ${this.ordernum},this ordernum is ${this.credintials }, `);
+
+    
+}
+} 
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

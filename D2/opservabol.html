@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observable</title>
+</head>
+<body>
+    <h1>Observable</h1>
+    <h1>open consol     </h1>
+
+
+    <script>
+class store
+{
+    constructor()
+    {
+        this.prodactname="";
+        this.coantaty=[];
+    }
+
+    register(person)
+    {
+       this.coantaty.push(person);
+    }
+
+ 
+
+    Newprodact(title)
+    {
+        this.prodactname=title;
+        //notify all the 
+        this.notifyAll();
+    }
+
+    notifyAll()
+    {
+        return this.coantaty.forEach(sub=>sub.update(this));
+    }
+}
+
+class salesmane
+{
+    update(store)
+    {
+        console.log(`New prodact       ${store.prodactname}`);
+    }
+}
+
+class acounter
+{
+    update(store)
+    {
+        console.log(`New prodact       ${store.prodactname}`);
+    }
+}
+
+
+
+
+
+
+const food = new store();
+
+const khaked = new salesmane();
+food.register(khaked);
+food.Newprodact("dray food");
+
+
+const mo_awaad = new acounter();
+food.register(mo_awaad);
+
+
+food.Newprodact("grreen")
+
+
+
+    </script>
+</body>
+</html>
